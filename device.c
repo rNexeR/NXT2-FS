@@ -33,8 +33,7 @@ int readSB(const char *path){
   	return es.s_magic == 61267 ? 0 : -1;
 }
 
-int device_open(const char *path) 
-{
+int device_open(const char *path) {
     device_path = path;
     f = fopen(path, "r+");
 
@@ -43,13 +42,11 @@ int device_open(const char *path)
     return (f != NULL && status == 0);
 }
 
-void device_close()
-{
+void device_close(){
     fflush(f);
     fclose(f);
 }
 
-void device_flush()
-{
+void device_flush(){
     fflush(f);
 }
