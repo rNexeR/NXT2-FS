@@ -10,7 +10,7 @@ clean:
 bin: 
 	mkdir -p bin
 
-bin/sfs: bin obj/sfs.o obj/main.o
+bin/sfs: bin obj/sfs.o obj/device.o obj/main.o
 	g++ -g -o bin/sfs obj/* $(LINKFLAGS)
 
 obj:
@@ -22,3 +22,5 @@ obj/main.o: obj main.c sfs.h
 obj/sfs.o: obj sfs.c sfs.h 
 	g++ -g $(CFLAGS) -c sfs.c -o $@
 
+obj/device.o: obj device.c device.h
+	g++ -g $(CFLAGS) -c device.c -o $@

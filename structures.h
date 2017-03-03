@@ -1,6 +1,6 @@
-#define uint8 unsigned short int
-#define uint16 unsigned int
-#define uint32 unsigned long int
+#define uint8 short short int
+#define uint16 unsigned short int
+#define uint32 unsigned int
 
 struct s_superblock{
 	uint32 s_inodes_count;
@@ -10,13 +10,14 @@ struct s_superblock{
 	uint32 s_free_inodes_count;
 	uint32 s_first_data_block;
 	uint32 s_log_block_size;
-	uint32 s_log_flag_size;
+	uint32 s_log_frag_size;
 	uint32 s_blocks_per_group;
 	uint32 s_flags_per_group;
 	uint32 s_inodes_per_group;
 	uint32 s_mtime;
 	uint32 s_wtime;
 	uint16 s_mnt_count;
+	uint16 s_max_mnt_count;
 	uint16 s_magic;
 	uint16 s_state;
 	uint16 s_errors;
@@ -29,7 +30,7 @@ struct s_superblock{
 	uint16 s_def_resgid;
 	uint32 s_firts_inode;
 	uint16 s_inode_size;
-}
+};
 
 struct s_block_group_descriptor{
 	uint32 bg_block_bitmap;
@@ -39,4 +40,4 @@ struct s_block_group_descriptor{
 	uint16 bg_free_inodes_count;
 	uint16 bg_used_dirs_count;
 	
-}
+};
