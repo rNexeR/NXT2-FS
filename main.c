@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
 	int i, fuse_stat;
 
 	sfs_oper.getattr = sfs_getattr;
-	sfs_oper.readlink = sfs_readlink;
+	/*sfs_oper.readlink = sfs_readlink;
 	sfs_oper.getdir = NULL;
 	sfs_oper.mknod = sfs_mknod;
 	sfs_oper.mkdir = sfs_mkdir;
@@ -21,18 +21,18 @@ int main(int argc, char *argv[]) {
 	sfs_oper.chmod = sfs_chmod;
 	sfs_oper.chown = sfs_chown;
 	sfs_oper.truncate = sfs_truncate;
-	sfs_oper.utime = sfs_utime;
+	sfs_oper.utime = sfs_utime;*/
 	sfs_oper.open = sfs_open;
 	sfs_oper.read = sfs_read;
-	sfs_oper.write = sfs_write;
+	/*sfs_oper.write = sfs_write;
 	sfs_oper.statfs = sfs_statfs;
 	sfs_oper.flush = sfs_flush;
 	sfs_oper.release = sfs_release;
 	sfs_oper.fsync = sfs_fsync;
-	sfs_oper.opendir = sfs_opendir;
+	sfs_oper.opendir = sfs_opendir;*/
 	sfs_oper.readdir = sfs_readdir;
-	sfs_oper.releasedir = sfs_releasedir;
-	sfs_oper.fsyncdir = sfs_fsyncdir;
+	/*sfs_oper.releasedir = sfs_releasedir;
+	sfs_oper.fsyncdir = sfs_fsyncdir;*/
 	sfs_oper.init = sfs_init;
 
 	printf("mounting file system...\n");
