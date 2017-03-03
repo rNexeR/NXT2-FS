@@ -1,4 +1,5 @@
 #include "sfs.h"
+#include "device.h"
 
 #include <fuse.h>
 #include <stdio.h>
@@ -41,7 +42,11 @@ int main(int argc, char *argv[]) {
 			return (-1);
 		}
 	}
-	printf("llego aqui\n");
+	
+	if (!device_open(realpath(argv[i], NULL)) ) {
+	    printf("Cannot open device file %s\n", argv[i]);
+	    return 1;
+	}
 
 	for(; i < argc; i++) {
 		argv[i] = argv[i+1];
