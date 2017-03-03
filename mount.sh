@@ -1,5 +1,3 @@
 #!/bin/bash
 
-bin/sfs $1 $2 -f -s
-
-
+bin/sfs $1 device -f -s
